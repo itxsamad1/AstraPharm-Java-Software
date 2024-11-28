@@ -112,7 +112,7 @@ public class EmployeeDashboard extends javax.swing.JFrame {
         });
         getContentPane().add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 170, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Abdul Samad\\Downloads\\basit.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/astrapharm/shopee.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, -1));
 
         pack();

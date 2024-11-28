@@ -95,7 +95,22 @@ public class Panadol extends javax.swing.JFrame {
 
     private void buyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buyMouseClicked
         // TODO add your handling code here:
-        
+        Object value = mquantity.getValue();
+        int panadol = (Integer) value;
+        int trate = 40*panadol;
+        String med= " Panadol";
+        DB_Model_AP db=new DB_Model_AP();
+        try{
+            int st=0;
+            st=db.Userbuy(id, med,Integer.toString(trate));
+            if(st!=0){
+                String t=""+trate;
+            new CustomerBuy(id,t).setVisible(true);
+            this.dispose();
+            }else{
+            JOptionPane.showMessageDialog(this, "Some error occur", "Alert", 2);
+            }
+        }catch(Exception e){System.out.println(e);}
     }//GEN-LAST:event_buyMouseClicked
 
     /**
